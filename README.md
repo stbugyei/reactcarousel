@@ -1,2 +1,2 @@
-A simple to-do web App with local storage for data persistence. It allows for dynamically uploading user image and register first name. Tech used is react.js.</br>
-[Demo Link](https://stbugyeitodos.netlify.app/)
+A custom React.js full-page auto slider with manual controls. No libraries are used.</br>
+[Demo Link](https://reactjscarousel.netlify.app/)
