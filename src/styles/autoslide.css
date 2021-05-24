@@ -116,15 +116,74 @@
 	transition: all .3s;
 }
 
-.indicator {
-	display: block;
-	width: 20px;
-	height: 20px;
-	border-radius: 50%;
-	cursor: pointer;
-	background-color: #bbb;
-	box-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 1px 2px rgb(0 0 0 / 23%);
+.controls-stretch {
+	position: relative;
+	width: 90%;
+	margin: auto;
+	display: flex;
+	justify-content: space-between;
+	background-color: transparent;
 	transition: all .5s;
+}
+
+.controls-stretch__width {
+	position: absolute;
+	top: 2px;
+	height: 5px;
+	overflow: hidden;
+	border-radius: 4px;
+	box-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 1px 2px rgb(0 0 0 / 23%); 
+	background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12); 
+	transition: all 1s;
+}
+
+.scroll-indicator__span {
+	position: absolute;
+	top: 0;
+	right: -4px;
+	display: block;
+	width: 11px;
+	border-radius: 10px;
+	height: 100%;
+	padding: 2px;
+	background:#b7331c;
+	box-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 1px 2px rgb(0 0 0 / 23%);
+}
+
+.indicator {
+	position: relative;
+	display: block;
+	width: 25px;
+	height: 9px;
+	border-radius: 25px;
+	cursor: pointer;
+	background-color: #fff;
+	box-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 1px 2px rgb(0 0 0 / 23%);
+	transition: all 2s;
+}
+
+.tooltip {
+	display: none;
+	position: absolute;
+	bottom: 27px;
+	right: -29px;
+	width: 80px;
+	height: 55px;
+	overflow: hidden;
+	border-radius: 4px;
+	border: 1px solid transparent;
+	box-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 1px 2px rgb(0 0 0 / 23%);
+}
+
+.tooltip img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 4px;
+}
+
+.indicator:hover .tooltip {
+	display: block;
 }
 
 .indicator:hover {
@@ -135,7 +194,7 @@
 
 @media screen and (max-width: 540px) {
 	.indicator-controls {
-		width: 100%;
+		width: 70%;
 		padding: initial;
 		margin-bottom: 10px;
 	}
@@ -172,7 +231,7 @@
 	}
 
 	.indicator-controls {
-		width: 100%;
+		width: 50%;
 		padding: initial;
 		margin-bottom: 10px;
 	}
